@@ -1,5 +1,17 @@
 .container {
   background-color: bisque;
+  width: 100%;
+  height: auto;
+}
+
+.flexTraitRow {
+  display: flex;
+  flex-flow: row;
+}
+
+.flexTraitColumn {
+  display: flex;
+  flex-flow: column;
 }
 
 .centering {
@@ -24,5 +36,6 @@
 
 #timer {
   margin: 2%;
+  text-align: right;
   font-family: 'PT Mono', monospace;
 }
