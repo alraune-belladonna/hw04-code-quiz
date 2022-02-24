@@ -1,0 +1,28 @@
+.container {
+  background-color: bisque;
+}
+
+.centering {
+  text-align: center;
+}
+
+.overallFont {
+  font-family: 'PT Mono', monospace;
+}
+
+.titles {
+  font: bolder;
+}
+
+#mainTitle {
+  padding-top: 20%;
+}
+
+#hsBtn {
+  margin: 2%;
+}
+
+#timer {
+  margin: 2%;
+  font-family: 'PT Mono', monospace;
+}
