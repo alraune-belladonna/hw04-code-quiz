@@ -1,28 +1,40 @@
+var timeLeft = 5;
+const timeLeftDisp = document.getElementById('timer').innerHTML
+const startBtn = document.getElementById('startBtn')
+
+// const timer = () => {
+
+//   // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+
+//   setInterval(function() {
+//     timeLeft--
+//     console.log('time down')
+
+//     if (time > 0) {
+//       timeLeftDisp.appendElement(`${timeLeft} seconds left until start`);
+//     }
+
+//     if (timeLeft < 0) {
+//       clearInterval(timeInterval)
+//       window.location.replace("./")
+//     }
+//   }, 1000);
+// }
+
 function timer() {
-  var timeLeft = 5;
-  var timeLeftDisp = body.div.appendElement(timeLeft + 'til Start');
-
-  // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-  const timeInterval = setInterval(() => {
-    timeLeft--
-    console.log('time down')
-
-    if (time > 0) {
-      timeLeftDisp = timeLeft + ' seconds til Start';
+  var sec = 5;
+  var timer = setInterval(function () {
+    document.getElementById('timer').innerHTML = '00:0' + sec + ' left until start';
+    sec--;
+    console.log('minus one second')
+    if (sec < 0) {
+      clearInterval(timer);
+      window.location.href = "./questionBody.html"
     }
-
-    if (timeLeft < 0) {
-      clearInterval(timeInterval)
-      displayMessage()
-    }
-  }, 1000)
+  }, 1000);
 }
 
-timer()
-
-const startButton = document.getElementById('startBtn')
-
-startButton.addEventListener('click', function() {
+startBtn.addEventListener('click', function() {
+  console.log('start click')
   timer()
-  console.log('Button Pressed')
 })
