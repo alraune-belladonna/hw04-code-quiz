@@ -27,6 +27,7 @@ function timerQuestions() {
   var timer = setInterval(function () {
     document.getElementById('timer').innerHTML = '00:' + sec + ' left'
     timeLeft--
+    console.log(timeLeft)
 
     //out of time
     if (sec < 0) {
