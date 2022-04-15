@@ -17,15 +17,15 @@ function timer() {
 const startBtn = document.getElementById('startBtn')
 startBtn.addEventListener('click', function() {
   console.log('start click')
-  timer()
+  timerQuestions()
 })
 
 //quiz timer
 
 function timerQuestions() {
   var timeLeft = 60
-  var timer = setInterval(function () {
-    document.getElementById('timer').innerHTML = '00:' + sec + ' left'
+  var timerQuiz = setInterval(function () {
+    document.getElementById('timerQuiz').innerHTML = `${timeLeft} seconds left`
     timeLeft--
     console.log(timeLeft)
 
@@ -41,20 +41,20 @@ function timerQuestions() {
 
 function quizQuestions() {
   var questionNumber = 1
-}
 
-function rightOrWrong() {
+  function rightOrWrong() {
 
-  const answerCorrectBtn = document.getElementById(answerCorrect)
-  answerCorrectBtn.addEventListener('click', function () {
-    console.log('correct click')
-    questionNumber++
-  })
+    const answerCorrectBtn = document.getElementById(answerCorrect)
+    answerCorrectBtn.addEventListener('click', function () {
+      console.log('correct click')
+      questionNumber++
+    })
 
-  const answerWrongBtn = document.getElementsByClassName(answerWrong)
-  answerWrongBtn.addEventListener('click', function () {
-    console.log('wrong click')
-    timeLeft - 5
-    questionNumber++
-  })
+    const answerWrongBtn = document.getElementsByClassName(answerWrong)
+    answerWrongBtn.addEventListener('click', function () {
+      console.log('wrong click')
+      timeLeft - 5
+      questionNumber++
+    })
+  }
 }
